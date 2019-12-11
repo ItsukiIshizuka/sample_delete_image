@@ -2,6 +2,10 @@
 %p
   %strong Name:
   = @product.name
+  %strong Image:
+  - @product.images.each do |i|
+    -if i.image.presence
+      = image_tag i.image.to_s, height: '100', width: '100'
 = link_to 'Edit', edit_product_path(@product)
 |
 = link_to 'Back', products_path
