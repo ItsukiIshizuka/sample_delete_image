@@ -18,6 +18,7 @@
           .input
             = image.hidden_field :id, value: image.object.id
             = image.hidden_field :_destroy, value: ""
+            %button.delete{type: :button}
       - else
         .new_input
           = image.file_field :image, class: :user_img

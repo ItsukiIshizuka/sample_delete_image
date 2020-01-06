@@ -8,6 +8,7 @@ $(function(){
                     <div class="input">
                     <input value="" type="hidden" name="product[images_attributes][${input_length-1}][_destroy]" id="product_images_attributes_0__destroy">
                     </div>
+                    <button class="delete" type="button"></button>
                     </div>`);
 
     let app_input = $(`<input class="user_img" type="file" name="product[images_attributes][${input_length}][image]">`);
@@ -25,9 +26,14 @@ $(function(){
 
   $(document).on("change", ".user_img", function(){
     $(this).css('display', 'none');
-    input_length = $(this).parent().parent().children().lengh;
+    input_length = $(this).parent().parent().children().length;
     readURL(this);
   });
 //ここまで画像プレビュー
+
+//ここから削除機能
+  $(document).on("click", ".delete", function(){
+  });
+//ここまで削除機能
 
 })
