@@ -1,13 +1,13 @@
 $(function(){
-
 //ここから画像プレビュー
-  let input_length = 0
+  let input_length = 0; //ファイル選択時点のimageの数を入れる
+
   function readURL(input) {
     let app_img = $(`<div class="image">
                     <img id="img_prev" height="100" width="100" src="">
                     <div class="input">
                     <div class="kara"></div>
-                    <input value="" type="hidden" name="product[images_attributes][${input_length-1}][_destroy]" id="product_images_attributes_0__destroy">
+                    <input value="" type="hidden" name="product[images_attributes][${input_length-1}][_destroy]">
                     <button class="delete" type="button"></button>
                     </div>
                     </div>`);
@@ -27,7 +27,7 @@ $(function(){
 
   $(document).on("change", ".user_img", function(){
     $(this).css('display', 'none');
-    input_length = $(this).parent().parent().children().length;
+    input_length = $(this).parent().parent().children().length; //ファイル選択時のimage数を数える
     readURL(this);
   });
 //ここまで画像プレビュー
