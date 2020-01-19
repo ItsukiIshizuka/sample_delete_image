@@ -1,5 +1,5 @@
 # README
-GIFを"issue"に投稿
+動作確認GIFを"[issue](https://github.com/ItsukiIshizuka/sample_delete_image/issues/1)"に投稿
 ## What
 1. 画像の複数枚削除
     1. プレビュー時に削除ボタン追加
